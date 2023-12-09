@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Tailwind Script  -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- box-icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	
+	<!--Title-->
+	<title>Suite</title>
+
+    <!-- style -->
+    <style>
+        /* google fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');  /*font-family: 'Work Sans', sans-serif;*/
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');  /*font-family: 'Playfair Display', serif;*/
+
+        *{
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        /* width */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: gray; 
+        }
+
+        h1{
+            font-family: 'Playfair Display', serif;
+        }
+
+        .main{
+            background: url('https://preview.colorlib.com/theme/suites/images/hero_1.jpg.webp');
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            isolation: isolate;
+            height: 100vh;
+        }
+        .main::before{
+            content: " ";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: rgb(0,0,0);
+            opacity: 0.4;
+        }
+
+        .heading h1{
+            width: max-content;
+            margin: auto;
+            position: relative;
+        }
+
+        .heading h1::after{
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            height: 1px;
+            width: 50%;
+            left: 0;
+            background-color: #000;
+            transform: translateX(50%);
+        }
+
+        .about h1{
+            width: max-content;
+            position: relative;
+        }
+
+        .about h1::after{
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            height: 1px;
+            width: 50%;
+            left: 0;
+            background-color: #000;
+        }
+
+        .summer{
+            background: url('https://preview.colorlib.com/theme/suites/images/hero_1.jpg.webp');
+            background-attachment: fixed;
+            position: relative;
+            isolation: isolate;
+        }
+
+        .summer::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: rgb(0, 0, 0);
+            opacity: 0.4;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!-- navbar & heropage -->
+    <div class="main">
+        <nav class="flex justify-between px-6 py-10 items-center md:px-20">
+            <div class="logo text-white">
+                <h1 class="text-3xl font-extralight">Suites</h1>
+            </div>
+            <ul class="hidden text-sm text-white md:flex space-x-8" style="font-family: 'Work Sans', sans-serif;">
+                <li class="uppercase"><a href="">home</a></li>
+                <li class="group relative uppercase items-center opacity-60 hover:opacity-100 transition duration-[1200ms]">
+                    <a href="">
+                    rooms 
+                    <i class='bx bxs-chevron-down'></i>
+                    </a>
+                    <div class="absolute bg-black text-white rounded-lg w-44 p-4 space-y-4 invisible group-hover:visible z-10 translate-y-3 group-hover:translate-y-0 transition duration-300">
+                        <p class="hover:text-[#f23a2e] cursor-pointer">Standerd Room</p>
+                        <p class="hover:text-[#f23a2e] cursor-pointer">Family Room</p>
+                        <p class="hover:text-[#f23a2e] cursor-pointer">Single Room</p>
+                    </div>
+                </li>
+                <li class="uppercase opacity-60 hover:opacity-100"><a href="">events</a></li>
+                <li class="uppercase opacity-60 hover:opacity-100"><a href="">about</a></li>
+                <li class="uppercase opacity-60 hover:opacity-100"><a href="">contact</a></li>
+            </ul>
+            <div class="menu text-white md:hidden">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
+        </nav>
+        <div class="text-center text-white py-16 md:py-32 lg:py-48">
+            <h1 class="text-5xl font-bold leading-tight md:text-[64px]">Welcome To Suites</h1>
+            <p class="text-xs uppercase tracking-[3px] pt-4 md:pt-0">hotel & resort</p>
+        </div>
+    </div>
+
+    <!-- our room -->
+    <section class="text-center bg-[#f8f9fa] px-6 py-20 md:px-20">
+        <div class="heading">
+            <h1 class="text-[40px]">Our Room</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-8 mt-16 md:gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Room-1 -->
+            <div class="group relative overflow-hidden shadow-lg">
+                <img class="group-hover:scale-105 transition-all duration-500" src="https://preview.colorlib.com/theme/suites/images/img_1.jpg" alt="">
+                <div class="py-8">
+                    <h2 class="text-xl font-medium uppercase">standerd room</h2>
+                    <p class="text-[#5c7893]">$350.00 / per night</p>
+                </div>
+            </div>
+
+            <!-- Room-2 -->
+            <div class="group relative overflow-hidden shadow-lg">
+                <img class="group-hover:scale-105 transition-all duration-500" src="https://preview.colorlib.com/theme/suites/images/img_2.jpg" alt="">
+                <div class="py-8">
+                    <h2 class="text-xl font-medium uppercase">family room</h2>
+                    <p class="text-[#5c7893]">$400.00 / per night</p>
+                </div>
+            </div>
+
+            <!-- Room-3 -->
+            <div class="group relative overflow-hidden shadow-lg">
+                <img class="group-hover:scale-105 transition-all duration-500" src="https://preview.colorlib.com/theme/suites/images/img_3.jpg" alt="">
+                <div class="py-8">
+                    <h2 class="text-xl font-medium uppercase">single room</h2>
+                    <p class="text-[#5c7893]">$350.00 / per night</p>
+                </div>
+            </div>
+
+            <!-- Room-4 -->
+            <div class="group relative overflow-hidden shadow-lg">
+                <img class="group-hover:scale-105 transition-all duration-500" src="https://preview.colorlib.com/theme/suites/images/img_1.jpg" alt="">
+                <div class="py-8">
+                    <h2 class="text-xl font-medium uppercase">deluxe room</h2>
+                    <p class="text-[#5c7893]">$150.00 / per night</p>
+                </div>
+            </div>
+
+            <!-- Room-5 -->
+            <div class="group relative overflow-hidden shadow-lg">
+                <img class="group-hover:scale-105 transition-all duration-500" src="https://preview.colorlib.com/theme/suites/images/img_2.jpg" alt="">
+                <div class="py-8">
+                    <h2 class="text-xl font-medium uppercase">luxury room</h2>
+                    <p class="text-[#5c7893]">$200.00 / per night</p>
+                </div>
+            </div>
+
+            <!-- Room-6 -->
+            <div class="group relative overflow-hidden shadow-lg">
+                <img class="group-hover:scale-105 transition-all duration-500" src="https://preview.colorlib.com/theme/suites/images/img_3.jpg" alt="">
+                <div class="py-8">
+                    <h2 class="text-xl font-medium uppercase">single room</h2>
+                    <p class="text-[#5c7893]">$155.00 / per night</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about us -->
+    <section class="grid grid-cols-1 gap-10 px-6 py-20 md:px-20 lg:grid-cols-2 lg:gap-28">
+        <div class="">
+            <img src="https://preview.colorlib.com/theme/suites/images/img_2.jpg.webp" alt="">
+        </div>
+        <div class="my-auto">
+            <div class="about">
+                <h1 class="text-[40px] font-medium"">About Us</h1>
+            </div>
+            <p class="text-base text-[#000000] opacity-50 py-6 leading-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..</p>
+            <div class="btn text-base">
+                <a class="text-[#f23a2e] uppercase" href="">watch video<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- hotel features -->
+    <section class="text-center px-6 py-20 md:px-20">
+        <div class="heading">
+            <h1 class="text-3xl md:text-[40px]">Hotel Features</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-7 gap-y-16 pt-24 md:grid-cols-2 lg:grid-cols-4">
+            <div class="">
+                <i class="material-symbols-outlined text-7xl font-light text-[#f23a2e]">pool</i>
+                <h3 class="text-xl py-2">Swimming Pool</h3>
+            </div>
+            <div class="">
+                <i class="material-symbols-outlined text-7xl font-light text-[#f23a2e]">apartment</i>
+                <h3 class="text-xl py-2">Hotel Teller</h3>
+            </div>
+            <div class="">
+                <i class="material-symbols-outlined text-7xl font-light text-[#f23a2e]">directions_run</i>
+                <h3 class="text-xl py-2">Fire Exit</h3>
+            </div>
+            <div class="">
+                <i class="material-symbols-outlined text-7xl font-light text-[#f23a2e]">local_parking</i>
+                <h3 class="text-xl py-2">Car Parking</h3>
+            </div>
+            <div class="">
+                <i class="material-symbols-outlined text-7xl font-light text-[#f23a2e]">spa</i>
+                <h3 class="text-xl py-2">Spa</h3>
+            </div>
+            <div class="">
+                <i class="material-symbols-outlined text-7xl font-light text-[#f23a2e]">local_bar</i>
+                <h3 class="text-xl py-2">Minibar</h3>
+            </div>
+            <div class="">
+                <i class="material-symbols-outlined text-7xl font-light text-[#f23a2e]">liquor</i>
+                <h3 class="text-xl py-2">Drinks</h3>
+            </div>
+            <div class="">
+                <i class="material-symbols-outlined text-7xl font-light text-[#f23a2e]">directions_car</i>
+                <h3 class="text-xl py-2">Car Airport</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- summer promo -->
+    <section class="summer text-white grid grid-cols-1 gap-9 px-6 py-10 md:grid-cols-2 md:px-20">
+        <div class="">
+            <h2 class="text-[32px] font-medium">Summer Promo 50% off</h2>
+            <div class="btn pt-5">
+                <a class="uppercase border border-[#eec60a] p-2 hover:bg-[#eec60a] hover:shadow-2xl" href="">avail now</a>
+            </div>
+        </div>
+        <div class="pt-6 md:pt-0">
+            <p class="text-xs uppercase tracking-[3px]">the promo will start</p>
+            <div class="grid grid-cols-2 gap-x-10 pt-4 lg:grid-cols-4 lg:gap-9 lg:gap-x-0">
+                <div class="flex items-baseline space-x-1">
+                    <span class="text-[40px]" id="day"></span>
+                    <p class="text-base opacity-70">days</p>
+                </div>
+                <div class="flex items-baseline space-x-1">
+                    <span class="text-[40px]" id="hr"></span>
+                    <p class="text-base opacity-70">hr</p>
+                </div>
+                <div class="flex items-baseline space-x-1">
+                    <span class="text-[40px]" id="min"></span>
+                    <p class="text-base opacity-70">min</p>
+                </div>
+                <div class="flex items-baseline space-x-1">
+                    <span class="text-[40px]" id="sec"></span>
+                    <p class="text-base opacity-70">sec</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our gallary -->
+    <section class="px-6 py-10 mt-14 md:px-20">
+        <div class="heading">
+            <h1 class="text-[40px]">Our Gallery</h1>
+        </div>
+        <div class="grid grid-cols-1 pt-16 md:grid-cols-2 lg:grid-cols-4">
+            <div class="group relative overflow-hidden">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_1.jpg" alt="">
+                <div class="absolute h-full w-full flex items-center -bottom-0 group-hover:bg-white/50 transition duration-300"></div>
+            </div>
+            <div class="group relative overflow-hidden">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_2.jpg" alt="">
+                <div class="absolute h-full w-full flex items-center -bottom-0 group-hover:bg-white/50 transition duration-300"></div>
+            </div>
+            <div class="group relative overflow-hidden">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_3.jpg" alt="">
+                <div class="absolute h-full w-full flex items-center -bottom-0 group-hover:bg-white/50 transition duration-300"></div>
+            </div>
+            <div class="group relative overflow-hidden">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_4.jpg" alt="">
+                <div class="absolute h-full w-full flex items-center -bottom-0 group-hover:bg-white/50 transition duration-300"></div>
+            </div>
+            <div class="group relative overflow-hidden">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_4.jpg" alt="">
+                <div class="absolute h-full w-full flex items-center -bottom-0 group-hover:bg-white/50 transition duration-300"></div>
+            </div>
+            <div class="group relative overflow-hidden">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_5.jpg" alt="">
+                <div class="absolute h-full w-full flex items-center -bottom-0 group-hover:bg-white/50 transition duration-300"></div>
+            </div>
+            <div class="group relative overflow-hidden">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_6.jpg" alt="">
+                <div class="absolute h-full w-full flex items-center -bottom-0 group-hover:bg-white/50 transition duration-300"></div>
+            </div>
+            <div class="group relative overflow-hidden">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_7.jpg" alt="">
+                <div class="absolute h-full w-full flex items-center -bottom-0 group-hover:bg-white/50 transition duration-300"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- upcoming event -->
+    <section class="px-6 py-10 mt-32 md:px-36">
+        <div class="heading">
+            <h1 class="text-3xl md:text-[40px]">Upcoming Events</h1>
+        </div>
+        <div class="pt-24 grid grid-cols-1 gap-14 lg:grid-cols-3">
+            <div class="">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_2.jpg.webp" alt="">
+                <div class="text-[#000] pt-5">
+                    <h2 class="text-lg">Lorem Ipsum Dolor Sit Amet</h2>
+                    <span class="text-[#989898]">Dec 20th, 2018 • By <a class="text-[#f23a2e]" href="">Admin</a></span>
+                    <div class="pt-5">
+                        <p class="text-[#989898]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_3.jpg.webp" alt="">
+                <div class="text-[#000] pt-5">
+                    <h2 class="text-lg">Lorem Ipsum Dolor Sit Amet</h2>
+                    <span class="text-[#989898]">Dec 20th, 2018 • By <a class="text-[#f23a2e]" href="">Admin</a></span>
+                    <div class="pt-5">
+                        <p class="text-[#989898]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <img src="https://preview.colorlib.com/theme/suites/images/img_1.jpg.webp" alt="">
+                <div class="text-[#000] pt-5">
+                    <h2 class="text-lg">Lorem Ipsum Dolor Sit Amet</h2>
+                    <span class="text-[#989898]">Dec 20th, 2018 • By <a class="text-[#f23a2e]" href="">Admin</a></span>
+                    <div class="pt-5">
+                        <p class="text-[#989898]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- what people say -->
+    <section class="bg-[#F8F9FA] px-6 py-20 mt-24 md:px-20">
+        <div class="heading">
+            <h1 class="text-3xl md:text-[40px]">What People Say</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-16 pt-20 lg:grid-cols-2">
+            <div class="flex space-x-5">
+                <img class="w-16 h-16 rounded-lg" src="https://preview.colorlib.com/theme/suites/images/person_3.jpg.webp" alt="">
+                <div class="">
+                    <h2 class="text-xl">Shane Holmes</h2>
+                    <blockquote class="italic text-base text-[#989898] pt-2">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!”</blockquote>
+                </div>
+            </div>
+            <div class="flex space-x-5">
+                <img class="w-16 h-16 rounded-lg" src="https://preview.colorlib.com/theme/suites/images/person_2.jpg.webp" alt="">
+                <div class="">
+                    <h2 class="text-xl">Jane Mars</h2>
+                    <blockquote class="italic text-base text-[#989898] pt-2">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!”</blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="bg-[#333333] text-base px-6 pt-20 mt-24 lg:px-20">
+        <div class="flex flex-col justify-between md:flex-row md:space-x-7">
+            <div class="">
+                <h2 class="text-xl text-white">About</h2>
+                <p class="text-[#969794] py-6 md:w-52 lg:w-[330px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
+                <div class="btn">
+                    <a class="bg-[#f23a2e]/80 text-white px-3 py-2 rounded-3xl hover:bg-[#f23a2e] hover:shadow-[#000]/40 hover:shadow-lg" href="">Read More</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 gap-8 pt-12 md:pt-0 md:grid-cols-3 lg:gap-36">
+                <div class="">
+                    <h2 class="text-xl text-white">Quick Menu</h2>
+                    <div class="text-[#6C6C6C] pt-6 space-y-3">
+                        <p class="hover:text-white w-0 cursor-pointer">About</p>
+                        <p class="hover:text-white w-0 cursor-pointer">Services</p>
+                        <p class="hover:text-white w-0 cursor-pointer">Approach</p>
+                        <p class="hover:text-white w-0 cursor-pointer">Sustainability</p>
+                        <p class="hover:text-white w-0 cursor-pointer">News</p>
+                        <p class="hover:text-white w-0 cursor-pointer">Careers</p>
+                    </div>
+                </div>
+                <div class="text-[#6C6C6C]">
+                    <h2 class="text-xl text-white">Ministries</h2>
+                    <div class="text-[#6C6C6C] pt-6 space-y-3">
+                        <p class="hover:text-white w-0 cursor-pointer">Children</p>
+                        <p class="hover:text-white w-0 cursor-pointer">Women</p>
+                        <p class="hover:text-white w-32 cursor-pointer">Bhagwat Geeta</p>
+                        <p class="hover:text-white w-0 cursor-pointer">Temples</p>
+                        <p class="hover:text-white w-0 cursor-pointer" cursor-pointer>Misstionarries</p>
+                    </div>
+                </div>
+                <div class="">
+                    <h2 class="text-xl text-white">Social Icons</h2>
+                    <div class="text-[#6C6C6C] pt-6 space-x-6">
+                        <i class="fa-brands fa-facebook-f hover:text-white cursor-pointer"></i>
+                        <i class="fa-brands fa-twitter hover:text-white cursor-pointer"></i>
+                        <i class="fa-brands fa-instagram hover:text-white cursor-pointer"></i>
+                        <i class="fa-brands fa-vimeo-v hover:text-white cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-32 py-14">
+            <p class="text-[#969794]">Copyright ©2023 All rights reserved | This template is made with  <i class="fa-regular fa-heart text-[#f23a2e]"></i>
+                by <span class="text-[#6C6C6C] font-medium">Abhijeet</span></p>
+        </div>
+    </footer>
+
+
+    <!-- scripts -->
+    <script>
+        let day,hr,min,sec;
+        setInterval(() => {
+            t = new Date();
+            day = t.getDay();
+            hr = t.getHours();
+            min = t.getMinutes(); 
+            sec = t.getSeconds();
+
+            document.getElementById('day').innerHTML = day;
+            document.getElementById('hr').innerHTML = hr;
+            document.getElementById('min').innerHTML = min;
+            document.getElementById('sec').innerHTML = sec;
+        }, 1000);
+    </script>
+</body>
+</html>
