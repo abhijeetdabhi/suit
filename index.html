@@ -106,39 +106,42 @@
             background: rgb(0, 0, 0);
             opacity: 0.4;
         }
+
+        ul.active{
+            transform: translateX(0%);
+            transition: all 0.4s ease-in-out;
+        }
+
+        ul.notActive{
+            transform: translateX(100%);
+            transition: all 0.4s ease-in-out;
+        }
     </style>
 
 </head>
 <body>
     
     <!-- navbar & heropage -->
-    <div class="main">
+    <div class="main overflow-hidden">
         <nav class="flex justify-between px-6 py-10 items-center md:px-20">
             <div class="logo text-white">
                 <h1 class="text-3xl font-extralight">Suites</h1>
             </div>
-            <ul class="hidden text-sm text-white md:flex space-x-8" style="font-family: 'Work Sans', sans-serif;">
-                <li class="uppercase"><a href="">home</a></li>
-                <li class="group relative uppercase items-center opacity-60 hover:opacity-100 transition duration-[1200ms]">
-                    <a href="">
-                    rooms 
-                    <i class='bx bxs-chevron-down'></i>
-                    </a>
-                    <div class="absolute bg-black text-white rounded-lg w-44 p-4 space-y-4 invisible group-hover:visible z-10 translate-y-3 group-hover:translate-y-0 transition duration-300">
-                        <p class="hover:text-[#f23a2e] cursor-pointer">Standerd Room</p>
-                        <p class="hover:text-[#f23a2e] cursor-pointer">Family Room</p>
-                        <p class="hover:text-[#f23a2e] cursor-pointer">Single Room</p>
-                    </div>
-                </li>
-                <li class="uppercase opacity-60 hover:opacity-100"><a href="">events</a></li>
-                <li class="uppercase opacity-60 hover:opacity-100"><a href="">about</a></li>
-                <li class="uppercase opacity-60 hover:opacity-100"><a href="">contact</a></li>
+            <ul id="ul" class="absolute flex-col top-0 right-0 gap-8 text-base text-black h-[100vh] bg-white pr-32 pl-6 py-8 translate-x-[100%] md:translate-x-0 md:text-sm md:h-auto md:bg-transparent md:text-white md:flex md:relative md:flex-row md:top-2 md:pr-0 md:py-0 md:pl-6" style="font-family: 'Work Sans', sans-serif;">
+                <div id="close" class="close absolute top-0 right-0 pt-8 px-8 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#000000" fill-rule="evenodd" d="M5 17.586a1 1 0 1 0 1.415 1.415L12 13.414 17.586 19A1 1 0 0 0 19 17.586L13.414 12 19 6.414A1 1 0 0 0 17.585 5L12 10.586 6.414 5A1 1 0 0 0 5 6.414L10.586 12z" clip-rule="evenodd" opacity="1" data-original="#000000"></path></g></svg>
+                </div>
+                <li class="uppercase text-[red] md:text-white mt-12 md:mt-0"><a href="">home</a></li>
+                <li class="uppercase mt-7 md:opacity-60 md:mt-0 hover:opacity-100"><a href="">rooms</a></li>
+                <li class="uppercase mt-7 md:opacity-60 md:mt-0 hover:opacity-100"><a href="">events</a></li>
+                <li class="uppercase mt-7 md:opacity-60 md:mt-0 hover:opacity-100"><a href="">about</a></li>
+                <li class="uppercase mt-7 md:opacity-60 md:mt-0 hover:opacity-100"><a href="">contact</a></li>
             </ul>
-            <div class="menu text-white md:hidden">
+            <div id="menuBar" class="menu text-white md:hidden">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </div>
         </nav>
-        <div class="text-center text-white py-16 md:py-32 lg:py-48">
+        <div class="heropage text-center text-white py-16 md:py-32 lg:py-48">
             <h1 class="text-5xl font-bold leading-tight md:text-[64px]">Welcome To Suites</h1>
             <p class="text-xs uppercase tracking-[3px] pt-4 md:pt-0">hotel & resort</p>
         </div>
@@ -442,14 +445,15 @@
             </div>
         </div>
         <div class="text-center mt-32 py-14">
-            <p class="text-[#969794]">Copyright ©2023 All rights reserved | This template is made with  <i class="fa-regular fa-heart text-[#f23a2e]"></i>
-                by <span class="text-[#6C6C6C] font-medium">Abhijeet</span></p>
+            <p class="text-[#969794]">Copyright ©2023 All rights reserved | This template is made with  <i class="fa-regular fa-heart text-[#f23a2e]"></i>by <span class="text-[#6C6C6C] font-medium">Abhijeet</span></p>
         </div>
     </footer>
 
 
     <!-- scripts -->
     <script>
+
+        // time meter
         let day,hr,min,sec;
         setInterval(() => {
             t = new Date();
@@ -463,6 +467,19 @@
             document.getElementById('min').innerHTML = min;
             document.getElementById('sec').innerHTML = sec;
         }, 1000);
+
+        // menubar
+        let menuBar = document.getElementById('menuBar');
+        let close = document.getElementById('close');
+        let ul = document.getElementById('ul');
+
+        menuBar.addEventListener('click',()=>{
+            ul.classList.add('active')
+        })
+
+        close.addEventListener('click',()=>{
+            ul.classList.add('notActive');
+        })
     </script>
 </body>
 </html>
